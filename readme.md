@@ -1,4 +1,5 @@
 Blog Articles
 =============
 
-drafts for articles to be published on MovableApp.com
+- [Everithing Is A Box](./everithing-is-a-box/article.md)
+- [Web Page Layouts](./web-page-layouts/article.md)
