@@ -218,7 +218,7 @@ In the **first level** we can identify two lines which slice the image into thre
       </div>
     </div>
 
-Code above show how we can convert a design analysis into an _HTML source code_. So far we are dscribing with _HTML tags_ the boxes and the _strong relations_ which exists between those boxes.
+Code above show how we can convert a design analysis into an [_HTML source code_ (open example)](./01-strong-relations.html). So far we are dscribing with _HTML tags_ the boxes and the _strong relations_ which exists between those boxes.
 
 > **At this step we take care of:**
 > 
@@ -229,3 +229,173 @@ Code above show how we can convert a design analysis into an _HTML source code_.
 brake down your temptation to assign classes and use more refined _HTML5 tags_.  
 So far **you must focus only on strong relations** and the very bare structure of the page.  
 <small>This is **WHY** we use only _DIVs_ in this step!</small>
+
+## Group Boxes by Properties
+
+So far we've built the [basic structure of our web page](./01-strong-relations.html) with which we simplified the _graphic design_ into boxes. This page structure implements the _strong relations_ which exist between these boxes.
+
+Now it's time to look another time to the layout analysis we did before.  
+**This time we focus on _soft relations_ which exists between boxes**.
+
+<img src="./fig6-analysis.jpg" alt="fig05 - rows OR columns" width="600px" />
+
+Looking with focus to the third image we can write following assertion for sure:
+
+- `LOGO`, `MAIN-CONTENT` and `INFO` boxes implement a **left behavior** 
+- `MENU` and `SIDEBAR` implement a **right behavior**
+- `LOGO` and `SIDEBAR` share the same dimension 
+- `MENU` and `MAIN-CONTENT` share the same dimension 
+- all `INFO` box share the same dimension
+
+Each assertion represent a specific behavior which apply to one or more boxes.  
+We can name these behavios:
+
+- **place-left:** `LOGO`, `MAIN-CONTENT` and `INFO` boxes implement a **left behavior** 
+- **place-right:** `MENU` and `SIDEBAR` implement a **right behavior**
+- **size-a:** `LOGO` and `SIDEBAR` share the same dimension 
+- **size-b:** `MENU` and `MAIN-CONTENT` share the same dimension 
+- **size-c:** all `INFO` box share the same dimension
+
+Stepping into the _HTML code_ we wrote we can use these **behavior names as _CLASSES_** for our _DIVs_:
+
+    // page structure with soft relations
+    <div class="main-container">
+      <div>
+        <div class="place-left size-a">LOGO</div>
+        <div class="place-right size-b">MENU</div>
+      </div>
+      <div>
+        <div class="place-left size-b">ARTICLE</div>
+        <div class="place-right size-a">SIDEBAR</div>
+      </div>
+      <div>
+        <div class="place-left size-c">INFO</div>
+        <div class="place-left size-c">INFO</div>
+        <div class="place-left size-c">INFO</div>
+        <div class="place-left size-c">INFO</div>
+      </div>
+    </div>
+
+> If you [open the example page](./02-soft-relations.html) you should notice that 
+> it still looks bad: no visual changes had been applied yet. 
+> This is because **_soft relations_ needs the support of a _CSS_** to be rendered 
+> by the browser! We're almost about to write it.
+
+### What did we gained so far?
+
+So far we have a very clear page structure where some box are grouped by _class_, and we have a straightforward list which exposes, beyond any doubt, which behavior is to be applied to each group.
+
+> We are playing with boxes and labels and we keep a legend of each label's meaning
+
+If a change is introduced to the design then we can easily understand what kind of relations are involved. 
+
+> _HTML_ code still be very simple because **it contains only the knowledge about relations**.
+
+
+
+
+## What's Your Pourpose?
+
+We know we are dealing with _HTML5_ and we know that exists many _tags_ which objective is to **explicit a particular pourpose for a particular box**.
+
+Some _tags_ are straightforward: to implement a _link_ you must use an `<A href="...">` tag,  some others are slightly more subtle. To implement a _sidebar_ you can use many tags:
+
+- `ARTICLE` which is very wrong
+- `ASIDE` which is very correct
+- `DIV` which is not wront neither correct
+
+The concept of _correct_ and _wrong_ are tied to the **deep meaning of a tag**:
+
+- an `ARTICLE` tag adds a meaning to it's contents: _"my content is an article"_
+- a `ASIDE` tag means: _"my content is not really the main content of this page, please consider it only as contour of the real content"_
+- ... and so on ...
+
+[You can find a list of HTML5 tags and meanings here](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/HTML5_element_list)
+
+Because our _HTML code_ still very dry it is not the perfect moment to improve it switching from the generic `DIV` to some more precise tag where necessary:
+
+    // meaningful tags:
+    <div class="main-container">
+      <header>
+        <div class="place-left size-a">LOGO</div>
+        <nav class="place-right size-b">MENU</nav>
+      </header>
+      <main>
+        <article class="place-left size-b">ARTICLE</article>
+        <aside class="place-right size-a">SIDEBAR</aside>
+      </main>
+      <section>
+        <div class="place-left size-c">INFO</div>
+        <div class="place-left size-c">INFO</div>
+        <div class="place-left size-c">INFO</div>
+        <div class="place-left size-c">INFO</div>
+      </section>
+    </div>
+    
+> If you [open the example page](./03-meaningful-tags.html) you should notice that 
+> it still looks bad: no visual changes had been applied yet. 
+> This is because **_soft relations_ needs the support of a _CSS_** to be rendered 
+> by the browser! We're almost about to write it.
+
+### What did we gained so far?
+
+If you approach your daily job asking yourself _**"why am I doing that?"**_ like I do then you'll find out that to use the most representative and meaningful tags to build your page structure is the only way to do that job.
+
+You really can't use generic or semantic wrong tags. If you still **focusing on the deep meaning** of what you are doing then **you should feel horrified** of the idea to use an `ARTICLE` instead of an `ASIDE`!!!
+
+To deep understand this point give you the _"to be horrified"_ feeling about semantic errors:  
+**you won't be able to be mistaken again!**
+
+Sideway this is a very important **internal Search Engine Optimization**: search engines always search to give the text the right meaning to provide more _to-the-point_ search results. 
+
+**_HTML5 Semantic Tags_ are the tool to give the right meanings to the right contents.**
+
+> Both _Google_ and your customer will appreciate your job!
+
+
+
+## Paint the Walls
+
+[open the example page](./04-css-styles.html)
+
+basic css
+
+    .main-container {
+      width: 600px;
+      margin: auto;
+    }
+      .place-left {
+      float:left;
+    }
+    .place-right {
+      float:right;
+    }
+    .size-a {
+      width: 200px;
+    }
+    .size-b {
+      width: 380px;
+    }
+    .size-c {
+      width: 140px;
+    }
+    
+need some fix up classes
+
+    <header class="row">
+      ...
+    </div>
+    <main class="row">
+      ...
+    </div>
+    <section class="row">
+      ...
+    </div>
+    
+implement floating fix up
+
+    .row:after {
+      display:block;
+      content: ' ';
+      clear:both;
+    }
