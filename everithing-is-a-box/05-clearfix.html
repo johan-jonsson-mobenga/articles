@@ -23,6 +23,16 @@
             width: 140px;
         }
         
+        /**
+         * CSS related
+         * fix floating box model weakness
+         */
+        .clearfix:after {
+            display:block;
+            content: ' ';
+            clear:both;
+        }
+        
         /* example related */
         .main-container {border: 1px dashed #aaa}
         .place-left, .place-right {background: #ddd;margin:5px}
@@ -30,15 +40,15 @@
     </head>
     <body>
         <div class="main-container">
-            <header>
+            <header class="clearfix">
                 <div class="place-left size-a">LOGO</div>
                 <nav class="place-right size-b">MENU</nav>
             </header>
-            <main>
+            <main class="clearfix">
                 <article class="place-left size-b">ARTICLE</article>
                 <aside class="place-right size-a">SIDEBAR</aside>
             </main>
-            <section>
+            <section class="clearfix">
                 <div class="place-left size-c">INFO</div>
                 <div class="place-left size-c">INFO</div>
                 <div class="place-left size-c">INFO</div>

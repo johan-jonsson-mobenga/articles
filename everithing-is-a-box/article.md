@@ -256,6 +256,16 @@ We can name these behavios:
 - **size-b:** `MENU` and `MAIN-CONTENT` share the same dimension 
 - **size-c:** all `INFO` box share the same dimension
 
+> **BEHAVIORS LIST:**  
+> This is called "behaviors list" and it contains the **full instructions 
+> on how to build your boxes**. 
+>
+> We also **gave a short but meaningful name to each behavior**, from now 
+> on we'll use the short name to refer to each behavior. 
+
+> This way we **cut out any misunderstanding in communications** between team members.
+
+
 Stepping into the _HTML code_ we wrote we can use these **behavior names as _CLASSES_** for our _DIVs_:
 
     // page structure with soft relations
@@ -356,15 +366,17 @@ Sideway this is a very important **internal Search Engine Optimization**: search
 
 ## Paint the Walls
 
-[open the example page](./04-css-styles.html)
+Now it's time to apply some _"painting"_ to out _HTML_ structure.
 
-basic css
+We've already **analyzed and gived names** to all our boxes behaviors 
+- do you remember the _behaviors list_? - so now we only have to solve a simple 
+_CSS_ job by **translating each behavior to a CSS definition**:
 
     .main-container {
       width: 600px;
       margin: auto;
     }
-      .place-left {
+    .place-left {
       float:left;
     }
     .place-right {
@@ -380,22 +392,28 @@ basic css
       width: 140px;
     }
     
+[open this example](./04-css-styles.html)
+
+Code above represents the bare minimal instructions which translates our
+    
 need some fix up classes
 
-    <header class="row">
+    <header class="clearfix">
       ...
     </div>
-    <main class="row">
+    <main class="clearfix">
       ...
     </div>
-    <section class="row">
+    <section class="clearfix">
       ...
     </div>
     
 implement floating fix up
 
-    .row:after {
+    .clearfix:after {
       display:block;
       content: ' ';
       clear:both;
     }
+    
+[open this example](./05-clearfix.html)
