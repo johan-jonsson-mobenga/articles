@@ -44,7 +44,7 @@ that now I know something more than before.
 As soon as you begin to simplify complex objects into boxes you discover **you need to describe the relation** from one box to the others. 
 
 > Remember we are talking about to cut a graphic image into a _web page_!   
-> **We are not making rocket science here!**
+> **The is no Black Magic around this argument!**
 
 Luckily there are very few way we can organize boxes, the first two of them I call **strong relations**, the last one I call **soft relation**.
 
@@ -218,7 +218,7 @@ In the **first level** we can identify two lines which slice the image into thre
       </div>
     </div>
 
-Code above show how we can convert a design analysis into an [_HTML source code_ (open example)](./01-strong-relations.html). So far we are dscribing with _HTML tags_ the boxes and the _strong relations_ which exists between those boxes.
+Code above show how we can convert a design analysis into an [_HTML source code_ (open Example-01)](./01-strong-relations.html). So far we are dscribing with _HTML tags_ the boxes and the _strong relations_ which exists between those boxes.
 
 > **At this step we take care of:**
 > 
@@ -232,7 +232,7 @@ So far **you must focus only on strong relations** and the very bare structure o
 
 ## Group Boxes by Properties
 
-So far we've built the [basic structure of our web page](./01-strong-relations.html) with which we simplified the _graphic design_ into boxes. This page structure implements the _strong relations_ which exist between these boxes.
+So far we've built the [basic structure of our web page (Example-01)](./01-strong-relations.html) with which we simplified the _graphic design_ into boxes. This page structure implements the _strong relations_ which exist between these boxes.
 
 Now it's time to look another time to the layout analysis we did before.  
 **This time we focus on _soft relations_ which exists between boxes**.
@@ -286,7 +286,7 @@ Stepping into the _HTML code_ we wrote we can use these **behavior names as _CLA
       </div>
     </div>
 
-> If you [open the example page](./02-soft-relations.html) you should notice that 
+> If you [open the Example-02](./02-soft-relations.html) then you should notice that 
 > it still looks bad: no visual changes had been applied yet. 
 > This is because **_soft relations_ needs the support of a _CSS_** to be rendered 
 > by the browser! We're almost about to write it.
@@ -342,7 +342,7 @@ Because our _HTML code_ still very dry it is not the perfect moment to improve i
       </section>
     </div>
     
-> If you [open the example page](./03-meaningful-tags.html) you should notice that 
+> If you [open the Example-03](./03-meaningful-tags.html) then you should notice that 
 > it still looks bad: no visual changes had been applied yet. 
 > This is because **_soft relations_ needs the support of a _CSS_** to be rendered 
 > by the browser! We're almost about to write it.
@@ -368,8 +368,8 @@ Sideway this is a very important **internal Search Engine Optimization**: search
 
 Now it's time to apply some _"painting"_ to out _HTML_ structure.
 
-We've already **analyzed and gived names** to all our boxes behaviors 
-- do you remember the _behaviors list_? - so now we only have to solve a simple 
+We've already **analyzed and gave names** to all our boxes behaviors 
+(do you remember the _behaviors list_?) so now we only have to solve a simple 
 _CSS_ job by **translating each behavior to a CSS definition**:
 
     .main-container {
@@ -392,12 +392,22 @@ _CSS_ job by **translating each behavior to a CSS definition**:
       width: 140px;
     }
     
-[open this example](./04-css-styles.html)
+[open Example-04](./04-css-styles.html)
 
-Code above represents the bare minimal instructions which translates our
+Code above represents the bare minimal instructions which **translates our _behaviors 
+list_ into _layout instructions_**.
+
+If you are a careful observer then you will notice that **main container's box has a null height** 
+(which is represented by a dashed border) and all floating boxes go outside container's space. 
+This behavior basically happen because **a floating box does not occupy space into it's container**.
+
+Unlukily when implementing a **floating layout** we need to add some extra informations to the 
+page structure **just to make things work**.
+
+> These informations does not represent any content or layout.  
+> We need them only to fixing up certain **_CSS_ idiosincraises**. 
     
-need some fix up classes
-
+    // setup "clearfix" on floating box containers
     <header class="clearfix">
       ...
     </div>
@@ -408,12 +418,11 @@ need some fix up classes
       ...
     </div>
     
-implement floating fix up
-
+    // simple clearfix implementation
     .clearfix:after {
       display:block;
       content: ' ';
       clear:both;
     }
-    
-[open this example](./05-clearfix.html)
+
+Now our exercise is complete: [open Example-05](./05-clearfix.html)
