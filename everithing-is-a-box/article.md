@@ -18,7 +18,7 @@ your window. Take a look!
 Every complex image or object from reality should be simplified to a set of boxes 
 which are in relation one to each others.
 
-<img src="./fig01-the-human-body.jpg" alt="fig01 - The Human Body" width="250px" />
+<img src="./img/fig01-the-human-body.jpg" alt="fig01 - The Human Body" width="250px" />
 
 The image above display a person (I really tried to draw a person!) which is a
 very complex object from the real world.
@@ -73,7 +73,7 @@ The _parent / child_ relation define **who contains who**.
 - `Box A` is `Box B`'s **CONTAINER**
 - `Box B` is `Box A`'s **CONTENT**
 
-<img src="./fig02-parent-child.jpg" alt="fig02 - Parent / Child Relation" width="250px" />
+<img src="./img/fig02-parent-child.jpg" alt="fig02 - Parent / Child Relation" width="250px" />
 
 
 It's important to understand than **one box can have one and only one container** like a human being should have one and only one biological father.
@@ -111,7 +111,7 @@ This **order relation** is something related with the **importance of a box**.
 > If you think to your bedroom's chest then the "first drawer" is also the first box 
 > which have been placed inside it.
 
-<img src="./fig03-before-after.jpg" alt="fig03 - Before / After Relation" width="250px" />
+<img src="./img/fig03-before-after.jpg" alt="fig03 - Before / After Relation" width="250px" />
 
 Given a box you can use this relation **to identify adjacent boxes**.
 
@@ -147,7 +147,7 @@ The _left / right_ relation is a **soft relation** because regards **how boxes a
 
 It is really important to understand that _left / right_ relation **does not depend** on _before / after_ relation. It is a relation which i**s built upon visual rules** such CSS rules:
 
-<img src="./fig04-left-right.jpg" alt="fig03 - Before / After Relation" />
+<img src="./img/fig04-left-right.jpg" alt="fig03 - Before / After Relation" />
 
 Image above show how a strong _before / after_ relation (on the left) should be arranged in two different _left / right_ relations.
 
@@ -185,7 +185,7 @@ We already learned about which relations should exists between boxes, now it's t
 > Every box's contents should be arranged in only one way:  
 > **or ROWS or COLUMNS**!
 
-<img src="./fig05-rows-columns.jpg" alt="fig05 - rows OR columns" width="400px" />
+<img src="./img/fig05-rows-columns.jpg" alt="fig05 - rows OR columns" width="400px" />
 
 There is no way for a browser to render a mix of rows and columns, all we have to do to convert a design to an HTML is to:
 
@@ -194,7 +194,7 @@ There is no way for a browser to render a mix of rows and columns, all we have t
 - draw all child boxes
 - **repeat the analysis for each child box**
 
-<img src="./fig6-analysis.jpg" alt="fig05 - rows OR columns" width="600px" />
+<img src="./img/fig6-analysis.jpg" alt="fig05 - rows OR columns" width="600px" />
 
 Image above show how we can simplify a complex web design to a list of boxes level by level.
 
@@ -218,7 +218,7 @@ In the **first level** we can identify two lines which slice the image into thre
       </div>
     </div>
 
-Code above show how we can convert a design analysis into an [_HTML source code_ (open Example-01)](./01-strong-relations.html). So far we are dscribing with _HTML tags_ the boxes and the _strong relations_ which exists between those boxes.
+Code above show how we can convert a design analysis into an [_HTML source code_ (open Example-01)](./example/01-strong-relations.html). So far we are dscribing with _HTML tags_ the boxes and the _strong relations_ which exists between those boxes.
 
 > **At this step we take care of:**
 > 
@@ -232,12 +232,12 @@ So far **you must focus only on strong relations** and the very bare structure o
 
 ## Group Boxes by Properties
 
-So far we've built the [basic structure of our web page (Example-01)](./01-strong-relations.html) with which we simplified the _graphic design_ into boxes. This page structure implements the _strong relations_ which exist between these boxes.
+So far we've built the [basic structure of our web page (Example-01)](./example/01-strong-relations.html) with which we simplified the _graphic design_ into boxes. This page structure implements the _strong relations_ which exist between these boxes.
 
 Now it's time to look another time to the layout analysis we did before.  
 **This time we focus on _soft relations_ which exists between boxes**.
 
-<img src="./fig6-analysis.jpg" alt="fig05 - rows OR columns" width="600px" />
+<img src="./img/fig6-analysis.jpg" alt="fig06 - design analysis" width="600px" />
 
 Looking with focus to the third image we can write following assertion for sure:
 
@@ -286,7 +286,7 @@ Stepping into the _HTML code_ we wrote we can use these **behavior names as _CLA
       </div>
     </div>
 
-> If you [open the Example-02](./02-soft-relations.html) then you should notice that 
+> If you [open the Example-02](./example/02-soft-relations.html) then you should notice that 
 > it still looks bad: no visual changes had been applied yet. 
 > This is because **_soft relations_ needs the support of a _CSS_** to be rendered 
 > by the browser! We're almost about to write it.
@@ -342,7 +342,7 @@ Because our _HTML code_ still very dry it is not the perfect moment to improve i
       </section>
     </div>
     
-> If you [open the Example-03](./03-meaningful-tags.html) then you should notice that 
+> If you [open the Example-03](./example/03-meaningful-tags.html) then you should notice that 
 > it still looks bad: no visual changes had been applied yet. 
 > This is because **_soft relations_ needs the support of a _CSS_** to be rendered 
 > by the browser! We're almost about to write it.
@@ -392,7 +392,7 @@ _CSS_ job by **translating each behavior to a CSS definition**:
       width: 140px;
     }
     
-[open Example-04](./04-css-styles.html)
+[open Example-04](./example/04-css-styles.html)
 
 Code above represents the bare minimal instructions which **translates our _behaviors 
 list_ into _layout instructions_**.
@@ -425,4 +425,6 @@ page structure **just to make things work**.
       clear:both;
     }
 
-Now our exercise is complete: [open Example-05](./05-clearfix.html)
+Now our exercise is complete: [open Example-05](./example/05-clearfix.html)
+
+<img src="./img/fig7-final-result.jpg" alt="fig07 - final result" width="600px" />
