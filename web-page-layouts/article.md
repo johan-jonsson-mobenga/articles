@@ -25,7 +25,7 @@ There are _two main families_ of web page layouts - **boxed layouts** and **flui
 
 This is the most common _web page layout_ because it's quite simple to deal with. It's main property is the **fixed dimension of the main container** which make possible to set very precise dimensions for images, columns and other UI components.
 
-<img src="./fig01-boxed-layout.jpg" alt="fig01 - Boxed Layout" width="450px" />
+<img src="./img/fig01-boxed-layout.jpg" alt="fig01 - Boxed Layout" width="450px" />
 
     // HTML
     <div class="container">
@@ -62,7 +62,7 @@ A **web app** - like _GMail_ - needs to display a lot of things: menus, panels, 
 
 On the other side a **mobile web site** needs to display very simple contents to a very little screen so it also needs all available space to be used the better way.
 
-<img src="./fig02-fluid-layout.jpg" alt="fig02 - Fluid Layout" width="450px" />
+<img src="./img/fig02-fluid-layout.jpg" alt="fig02 - Fluid Layout" width="450px" />
 
     // HTML
     <div class="container">
@@ -106,7 +106,7 @@ It apply very good for a web page which should be vertically split into many are
 - _main container_ has dynamic width (fill the _viewport_)
 - each _main container_ has an **inner wrapper** wich has _boxed layout_ properties
 
-<img src="./fig03-fluid-boxed-layout.jpg" alt="fig03 - Fluid Boxed Layout" width="450px" />
+<img src="./img/fig03-fluid-boxed-layout.jpg" alt="fig03 - Fluid Boxed Layout" width="450px" />
 
     // HTML
     <div class="container">
@@ -139,3 +139,5 @@ This is called a **responsive layout** because it's behavior (so it's name) depe
 
 > Almost every modern _web site_ and _web apps_ implement this strategy/technology
 > to allow all kind of users to **enjoy the best possible user experience** with the page.
+
+<img src="./img/fig04-responsive-design.jpg" alt="fig04 - Responsive Design" width="600px" />
