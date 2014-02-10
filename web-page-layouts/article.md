@@ -3,7 +3,7 @@ Web Page Layouts
 
 The the generic word **"layout"** identify **how box contents should be arranged** in relation to the available space.
 
-> We can talk about the layout of any box at any nested level within a web page, 
+> We can talk about the layout of any box within a web page, 
 > but the pourpose of this article is to circumscribe the discussion 
 > to the overall **layout of a web page**. 
 
