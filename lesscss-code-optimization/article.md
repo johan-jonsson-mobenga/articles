@@ -161,3 +161,13 @@ Well, the risk in using (or abusing) preprocessors are in the generated CSS perf
 - verbose selectors
 
 All of these are possible **causes of bad CSS performances** and must be well understood and considered when it comes to write CSS for a complex page or WebApp!
+
+### Live Examples
+
+You can see what I'm talking about in these simple Codepen examples.
+
+I explicitly wrote some code repetition and I can observe that nothing is done by the preprocessor to optimise my code:
+
+- [LessCss Test](http://codepen.io/mpeg/pen/JjrED)
+- [SASS Test](http://codepen.io/mpeg/pen/gliCH)
+- [Stylus Test](http://codepen.io/mpeg/pen/HpefF)
