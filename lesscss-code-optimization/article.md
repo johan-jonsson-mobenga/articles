@@ -1,25 +1,25 @@
 LessCSS Code Optimization
 =========================
 
-I use _LessCss_ as **_CSS_ preprocessor** in my every day projects and I really like the
+I use LessCss as **CSS preprocessor** in my every day projects and I really like the
 benefits I gain from a developing time perspective. **I can't work without it anymore!**
 
-> Unfortunately _CSS_ preprocessors are not known to generate optimised _CSS_ code!
+> Unfortunately CSS preprocessors are not known to generate optimised CSS code!
 
 There are a lot of discussions around this argument and the most often 
 given answer is something like:
 
 > - Preprocessors are not optimization tools
-> - If you write bad _LessCss_ then you obtain bad _CSS_
+> - If you write bad LessCss then you obtain bad CSS
 
 **I could not agree more!**
 
 This article is about to point out the problem and **to present a possible _LessCss_ 
-best practice** in order **to generate optimised _CSS_** code out of the box.
+best practice** in order **to generate optimised CSS** code out of the box.
 
 ## Given Real Problem:
 
-The following _LessCss_ source code represent a classic multi-file approach where **different 
+The following LessCss source code represent a classic multi-file approach where **different 
 responsabilities are spreaded into many source files**.
 
 
@@ -134,6 +134,30 @@ The generated code looks exactly how I wished:
 ### Live Examples
 
 - [Unoptimised](http://codepen.io/mpeg/pen/fnzwc) - standard _Less_ code
-- [Optimised](http://codepen.io/mpeg/pen/bmztk) - exploit _Less_ features to produce nice _CSS_ code!
+- [Optimised](http://codepen.io/mpeg/pen/bmztk) - exploit _Less_ features to produce nice CSS code!
 
-## Post Processors Are Not So Good!
+## Preprocessors Are Not Optimisation Tools!
+
+When it comes to **CSS code optimisation** all the major CSS preprocessors sucks a lot.
+
+None of them are able to run the minimal amount of optimisation like removing overridden properties or packing many instances of the same selector.
+
+**I think this is the right behavior of such kind of tools!**
+
+> They are preprocessor, not optimisation tools!
+
+Nevertheless preprocessors give the developer a lot of powers over the basic CSS standard: you can nest selectors, you can use variables, mixins... 
+
+> With great powers comes great responsibility  
+> <small>Francois-Marie Arouet (Voltaire)</small>
+
+When you decide to use a preprocessor then you start learning it's rules and features.  
+**Very seldom you study about the risk in using them!**
+
+Well, the risk in using (or abusing) preprocessors are in the generated CSS performances, or in the **defect of performances!** 
+
+- code repetition
+- deep selectors
+- verbose selectors
+
+All of these are possible **causes of bad CSS performances** and must be well understood and considered when it comes to write CSS for a complex page or WebApp!
