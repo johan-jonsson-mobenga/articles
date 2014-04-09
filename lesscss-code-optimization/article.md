@@ -4,20 +4,20 @@ LessCSS Code Optimization
 I use _LessCss_ as **_CSS_ preprocessor** in my every day projects and I really like the
 benefits I gain from a developing time perspective. **I can't work without it anymore!**
 
-> Unlikely _CSS_ preprocessors are not known to generate optimised _CSS_ code!
+> Unfortunately _CSS_ preprocessors are not known to generate optimised _CSS_ code!
 
-Around the web there are a lot of discussions around this argument and the most often 
+There are a lot of discussions around this argument and the most often 
 given answer is something like:
 
-> Preprocessors are not optimization tools.  
-> If you write bad _Less_ then you obtain bad _CSS_.
+> - Preprocessors are not optimization tools
+> - If you write bad _LessCss_ then you obtain bad _CSS_
 
 **I could not agree more!**
 
 This article is about to point out the problem and **to present a possible _LessCss_ 
-best practice** in order to generate good _CSS_ code.
+best practice** in order **to generate optimised _CSS_** code out of the box.
 
-## A Real Problem:
+## Given Real Problem:
 
 The following _LessCss_ source code represent a classic multi-file approach where **different 
 responsabilities are spreaded into many source files**.
@@ -63,10 +63,10 @@ The generated code is far to be good!
 > The same selector `.btn` is repeated over and over again causing the 
 > browser to resolve the _xpath_ many times. 
 
-Code above is really slow to render, you can figure out the consequenques of this approach 
+Code above is really slow to render <small>(ok, it's slow from a CSS rendering perspective!)</small>, but you can figure out the consequenques of this approach 
 extended to a real project stylesheet!
 
-> My wish is to compact all these instructions into a single selector like the following:
+> I wish to compact all these instructions into a single selector like the following:
 
     .btn {
         display: block;
@@ -77,19 +77,16 @@ extended to a real project stylesheet!
         font-family: Tahoma;
         font-size: 14pt;
     }
-    
-## Post Processors Are Not So Good!
 
+## Here Is a Possible Solution:
 
-## A Possible Solution:
+The way I propose to solve this problem combines two preprocessor concepts:
 
-The way I propose to solve this problem combine two preprocessor concepts:
-
-- non outputting mixins
-- mixins extensions
+- [non outputting mixins](http://lesscss.org/features/#mixins-feature-not-outputting-the-mixin)
+- [extend inside ruleset](http://lesscss.org/features/#extend-feature-extend-inside-ruleset)
 
 The goal is to write a non outputting mixin, extend it serveral times and apply it to a single
-selector only when every other manipulations are complete.
+selector only when every other manipulations are over.
 
 
     // classes.less
@@ -134,11 +131,9 @@ The generated code looks exactly how I wished:
         font-size: 14pt;
     }
 
-    
---
+### Live Examples
 
-unoptmised mixin:  
-http://codepen.io/mpeg/pen/fnzwc
+- [Unoptimised](http://codepen.io/mpeg/pen/fnzwc) - standard _Less_ code
+- [Optimised](http://codepen.io/mpeg/pen/bmztk) - exploit _Less_ features to produce nice _CSS_ code!
 
-optimised mixin:  
-http://codepen.io/mpeg/pen/bmztk
+## Post Processors Are Not So Good!
