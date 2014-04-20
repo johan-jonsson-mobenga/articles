@@ -1,0 +1,38 @@
+<html>
+<head>
+    
+    <!-- 
+        link jQuery into the page so the function "$" will be available to
+        all the scripts which are loaded after this instruction.
+        
+        here we are using a Content Delivery Network (CDN) which basically hosts
+        the jQuery script file and allow people to link that file from their pages
+        instead of downloading it locally.
+        
+        you can choose to download jQuery library file and host it within your 
+        other assets.
+    -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    
+    
+    <!--
+        this is our example script.
+        here we use jQuery ($) so it is important for this code block to be placed
+        after jQuery link script.
+    -->
+    <script>
+    
+    // wrap our example's code to be executed when the page is ready
+    // (the page is ready when all assets linked inside the HEAD block are loaded)
+    $(document).ready(function() {
+        
+        // take the page's body and append a string to it
+        $('body').append('<p>Hello World by jQuery</p>');
+        
+    });
+    </script>
+</head>
+<body>
+    <p>Hello World by HTML</p>
+</body>
+</html>

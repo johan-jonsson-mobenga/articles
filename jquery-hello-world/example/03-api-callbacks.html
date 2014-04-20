@@ -1,0 +1,25 @@
+<html>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+            $('<p>Hello World by jQuery</p>')
+                .appendTo('body')
+                .css('background', 'yellow')
+                .hide()
+                
+                // to a fadeIn action, when finish then execute the given function
+                // give that function a reference to the object i'm working on
+                .fadeIn(2000, function() {
+                    
+                    // take the given context and apply an empty CSS background
+                    $(this).css('background', '');
+                    
+                });
+    });
+    </script>
+</head>
+<body>
+    <p>Hello World by HTML</p>
+</body>
+</html>

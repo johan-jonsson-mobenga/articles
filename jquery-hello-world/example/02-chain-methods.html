@@ -1,0 +1,23 @@
+<html>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+            
+            /**
+             * - create a new jQuery object from a string containing some HTML code
+             * - apply many jQuery API to that object
+             */
+            $('<p>Hello World by jQuery</p>')
+                .appendTo('body')
+                .css('background', 'yellow')
+                .hide()
+                .fadeIn(2000); 
+                
+    });
+    </script>
+</head>
+<body>
+    <p>Hello World by HTML</p>
+</body>
+</html>
