@@ -31,7 +31,7 @@ The best way to understand _jQuery_ is to run a simple example then try to under
     </body>
     </html>
 
-<iframe src="http://cdpn.io/rIsev" width="100%" height="90px" style="border: 1px solid black"></iframe>
+<!--<iframe src="http://cdpn.io/rIsev" width="100%" height="90px" style="border: 1px solid black"></iframe>-->
 
 <small>[open the full commented source file for this example](./example/01-hello-world.html)</small>
 
@@ -115,7 +115,7 @@ With this brand new object we can play with all jQuery's API methods, **we can a
 - hide
 - fadeIn
 
-<iframe src="http://cdpn.io/zoeug" width="100%" height="90px" style="border: 1px solid black"></iframe>
+<!--<iframe src="http://cdpn.io/zoeug" width="100%" height="90px" style="border: 1px solid black"></iframe>-->
 
 <small>[open the full commented source file for this example](./example/02-chain-methods.html)</small>
 
@@ -148,7 +148,7 @@ Now our example should progress to:
         $(this).css('background', null);
     });
 
-<iframe src="http://cdpn.io/oBAlI" width="100%" height="90px" style="border: 1px solid black"></iframe>
+<!--<iframe src="http://cdpn.io/oBAlI" width="100%" height="90px" style="border: 1px solid black"></iframe>-->
 
 <small>[open the full commented source file for this example](./example/03-api-callbacks.html)</small>
 
@@ -169,6 +169,32 @@ should be read as:
 
 
 ## Which problem does jQuery solve?
+
+> Well, jQuery provides the developer with a **simple and cross browser API to interact with the page's DOM**.
+
+[jQuery](http://en.wikipedia.org/wiki/JQuery) was released on January 2006 with the explicit scope to **provide a unified API to manipulate the DOM** in different browsers.
+
+> It was the the most fierce period of the [browser war](http://en.wikipedia.org/wiki/Browser_wars) but still IE6 was causing a lot of troubles to many developers.
+
+The simplest operations like add or remove a class name from a _DIV_ were a nightmare of many different implementations, setup a click handler was rocket science for many people.
+
+jQuery allow to select items with a _CSS like_ syntax then apply actions to the selection. Suddenly a huge amount of HTML guys were able to write jQuery code which is much more easy and explicit than pure Javascript.
+
+    // pseudo code
+    getThatButton.onClick(... do something ...)
+    
+    // VanillaJS (pure Javascript)
+    var btn = document.getElementById('that-button');
+    if (btn.addEventListener) {
+        btn.addEventListener('click', function() { ... });
+    } else {
+        obj.attachEvent('onclick', function() { ... });
+    }
+    
+    // jQuery
+    $('#that-button').on('click', function() { ... });
+
+
 
 ## Download or CDN?
 
