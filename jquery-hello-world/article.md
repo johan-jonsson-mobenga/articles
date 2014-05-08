@@ -170,7 +170,7 @@ should be read as:
 
 ## Which problem does jQuery solve?
 
-> Well, jQuery provides the developer with a **simple and cross browser API to interact with the page's DOM**.
+> Well, jQuery provides the developer with a **simple and cross browser API to interact with the [page's DOM](http://en.wikipedia.org/wiki/Document_Object_Model)**.
 
 [jQuery](http://en.wikipedia.org/wiki/JQuery) was released on January 2006 with the explicit scope to **provide a unified API to manipulate the DOM** in different browsers.
 
