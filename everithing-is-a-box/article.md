@@ -1,5 +1,5 @@
-Everithing Is A Box
-===================
+# Everything Is a Box
+---
 
 When you first approach the art of **converting a design to a web page**
 you really need to **understand that everything is a box**. 

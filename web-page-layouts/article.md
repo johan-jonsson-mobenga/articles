@@ -1,5 +1,5 @@
-Web Page Layouts
-================
+# Web Page Layouts
+---
 
 The the generic word **"layout"** identifies **how box contents should be arranged** in relation to the available space.
 

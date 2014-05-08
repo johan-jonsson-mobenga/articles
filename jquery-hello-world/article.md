@@ -1,5 +1,5 @@
-jQuery Hello World
-==================
+# jQuery Hello World
+---
 
 _jQuery_ is a _Javascript_ library which facilitates the writing of complex UI behaviors code by **removing any cross browser incompatibility**.
 

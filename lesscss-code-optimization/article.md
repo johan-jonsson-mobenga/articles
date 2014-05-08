@@ -1,5 +1,5 @@
-LessCSS Code Optimization
-=========================
+# LessCSS Code Optimization
+---
 
 I use LessCss as **CSS preprocessor** in my every day projects and I really like the
 benefits I gain from a developing time perspective. **I can't work without it anymore!**
