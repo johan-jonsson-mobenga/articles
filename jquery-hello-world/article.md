@@ -8,6 +8,8 @@ _jQuery_ is a _Javascript_ library which facilitates the writing of complex UI b
 > 
 > **You need some basic _HTML_ skills** in order to fuly comprehend this article. 
 
+<!--more-->
+
 ## Quick & Dirty Example
 
 The best way to understand _jQuery_ is to run a simple example then try to understand _WHY_ it works.
