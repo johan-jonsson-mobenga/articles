@@ -28,13 +28,16 @@ We can also mix those main families to obtain many different **hybrid layouts** 
 This is the most common _web page layout_ because it's quite simple to deal with. It's main property is the **fixed dimension of the main container** which make possible to set very precise dimensions for images, columns and other UI components.
 
 <img src="./img/fig01-boxed-layout.jpg" alt="fig01 - Boxed Layout" width="450px" />
-
+    
+    {% highlight html linenos %}
     // HTML
     <div class="container">
         <div class="content">Box A</div>
         <div class="content">Box B</div>
     </div>
+    {% endhighlight %}
     
+    {% highlight css linenos %}
     // CSS
     .container {
         width: 800px;
@@ -43,6 +46,7 @@ This is the most common _web page layout_ because it's quite simple to deal with
     .content {
         width: 100%;  /* optional */
     }
+    {% endhighlight %}
 
 The most of the time this layout appear to be a paper centered to the browser's viewport. The content's background contrasts that much with the overall background and very often a border is visible.
 
@@ -65,7 +69,8 @@ A **web app** - like _GMail_ - needs to display a lot of things: menus, panels, 
 On the other side a **mobile web site** needs to display very simple contents to a very narrow screen so it also needs all available space to be used the best possible way.
 
 <img src="./img/fig02-fluid-layout.jpg" alt="fig02 - Fluid Layout" width="450px" />
-
+    
+    {% highlight html linenos %}
     // HTML
     <div class="container">
         <div>Box A</div>
@@ -75,13 +80,16 @@ On the other side a **mobile web site** needs to display very simple contents to
         <div>Box C</div>
         <div>Box D</div>
     </div>
-    
+    {% endhighlight %}
+
+    {% highlight css linenos %}
     // CSS
     .container {
         width: auto;
         margin-left: 50px;
         margin-right: 50px;
     }
+    {% endhighlight %}
 
 In above code we use some _containers_ which spread to all available horizontal space but for a fixed margin. Then we can use those containers to implement some left/right columns with _float_ or _flexbox_ <small>(not implemented into this example code)</small>.
 
@@ -111,7 +119,8 @@ It fits very well a web page which should be vertically split into many areas, e
 - each _main container_ has an **inner wrapper** wich has _boxed layout_ properties
 
 <img src="./img/fig03-fluid-boxed-layout.jpg" alt="fig03 - Fluid Boxed Layout" width="450px" />
-
+    
+    {% highlight html linenos %}
     // HTML
     <div class="container">
         <div class="content">Box A</div>
@@ -119,7 +128,9 @@ It fits very well a web page which should be vertically split into many areas, e
     <div class="container">
         <div class="content">Box B</div>
     </div>
+    {% endhighlight %}
     
+    {% highlight html linenos %}
     // CSS
     .container {
         width: auto;
@@ -128,6 +139,7 @@ It fits very well a web page which should be vertically split into many areas, e
         width: 800px;
         margin: auto;
     }
+    {% endhighlight %}
     
 
 

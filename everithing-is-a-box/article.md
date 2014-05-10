@@ -7,6 +7,8 @@ you really need to **understand that everything is a box**.
 I really mean it, for both web design and the real world outside 
 your window. Take a look!
 
+<!--more-->
+
 > &raquo; **with HTML** we are going to use `div` to represent boxes.
 > 
 > A `div` is normally rendered as a real squared or rectangular area on 
