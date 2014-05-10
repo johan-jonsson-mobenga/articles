@@ -18,7 +18,8 @@ The best way to understand _jQuery_ is to run a simple example then try to under
 > This action alter the page's _DOM_ structure introducing a new node.
 
 ### HTML:
-
+    
+    {% highlight html linenos %}
     <html>
     <head>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
@@ -32,6 +33,7 @@ The best way to understand _jQuery_ is to run a simple example then try to under
         <p>Hello World by HTML</p>
     </body>
     </html>
+    {% endhighlight %}
 
 <!--<iframe src="http://cdpn.io/rIsev" width="100%" height="90px" style="border: 1px solid black"></iframe>-->
 
@@ -41,11 +43,11 @@ Code above contains a fully functional jQuery script which **add a new DOM eleme
 
 ### Understanding the Example
 
-> 1\. link jQuery library file
+> link jQuery library file
 
 The first `script` tag **links jQuery library** from Google CDN (we'll discuss this later). This instruction include the library into the page, **all jQuery based code must be placed after this instruction** in order to work!
 
-> 2\. use jQuery through the global symbol `$`
+> use jQuery through the global symbol `$`
 
 The second `script` block contains the example's code. Here jQuery is available to be used through **the `$` global symbol which basically _IS_ jQuery** for your code perspective.
 
@@ -55,8 +57,10 @@ The second `script` block contains the example's code. Here jQuery is available 
 A _jQuery script_ is basically a piece of Javascript where jQuery API are used with the _global symbol_ `$.apiMethod()`.
 
 The first instruction in our example it's a wrapper whose purpose is to **run jQuery code when the page is ready**:
-
+    
+    {% highlight js linenos %}
     $(document).ready(...);
+    {% endhighlight %}
     
 > jQuery is used to manipulate page's DOM structure, in order to do this job without errors 
 > that DOM structure must be loaded and ready to be used!
@@ -64,8 +68,10 @@ The first instruction in our example it's a wrapper whose purpose is to **run jQ
 ### Understanding a jQuery Instruction
 
 The only other instruction in our first example is:
-
+    
+    {% highlight js linenos %}
     $('body').append('...');
+    {% endhighlight %}
     
 that should be read like: 
 
@@ -73,8 +79,10 @@ that should be read like:
 
 We should split this simple line of code in two distinct responsibilities:
 
+    {% highlight js linenos %}
     1) $('body')        // take the page's body
     2) .append('...')   // append "..." to it
+    {% endhighlight %}
     
 The first instruction **take a CSS like selector and return a jQuery Object** which can be manipulated via jQuery API methods.
 
@@ -101,12 +109,14 @@ Now we cant try a different approach:
 - we add a fade-in effect in order to animate the action
     
 Here is the code, we modify only the real example's code, the `document.ready` wrapper does not change:
-
+    
+    {% highlight js linenos %}
     $('<p>Hello World by jQuery</p>')
         .appendTo('body')
         .css('background', 'yellow')
         .hide()
         .fadeIn(2000);
+    {% endhighlight %}
       
 The first instruction looks like the one we used to match the page's body `$('body')`, the difference here is that we give jQuery with **a portion of HTML code instead of a CSS selector** so jQuery understand and create an new object.
 
@@ -128,7 +138,7 @@ In the previous example we used a **basic animation method** `fadeIn()` to give 
 > Can we remove the background color when the animation is complete?
 
 **Of course you can!**, many jQuery methods accepts a _function_ to be executed when they finish their job:
-
+    
     // pseudo code
     $.doSomething(doSomethingElse)
     
