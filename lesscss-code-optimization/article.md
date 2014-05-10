@@ -17,12 +17,14 @@ given answer is something like:
 This article is about to point out the problem and **to present a possible _LessCss_ 
 best practice** in order **to generate optimised CSS** code out of the box.
 
+<!--more-->
+
 ## Given Real Problem:
 
 The following LessCss source code represent a classic multi-file approach where **different 
 responsabilities are spreaded into many source files**.
 
-
+    {% highlight css linenos %}
     // structure.less
     .btn {
         display:block;
@@ -41,9 +43,11 @@ responsabilities are spreaded into many source files**.
         font-family: Tahoma;
         font-size: 14pt;
     }
+    {% endhighlight %}
     
 The generated code is far to be good!
-
+    
+    {% highlight css linenos %}
     .btn {
         display: block;
         border: 2px solid black;
@@ -57,6 +61,7 @@ The generated code is far to be good!
         font-family: Tahoma;
         font-size: 14pt;
     }
+    {% endhighlight %}
 
 [Play with this code!](http://codepen.io/mpeg/pen/fnzwc)
 
@@ -68,6 +73,7 @@ extended to a real project stylesheet!
 
 > I wish to compact all these instructions into a single selector like the following:
 
+    {% highlight css linenos %}
     .btn {
         display: block;
         border: 2px solid black;
@@ -77,6 +83,7 @@ extended to a real project stylesheet!
         font-family: Tahoma;
         font-size: 14pt;
     }
+    {% endhighlight %}
 
 ## Here Is a Possible Solution:
 
@@ -88,7 +95,7 @@ The way I propose to solve this problem combines two preprocessor concepts:
 The goal is to write a non outputting mixin, extend it serveral times and apply it to a single
 selector only when every other manipulations are over.
 
-
+    {% highlight css linenos %}
     // classes.less
     .classBtn() {}
     
@@ -118,9 +125,11 @@ selector only when every other manipulations are over.
     .btn {
         .classBtn;
     }
+    {% endhighlight %}
     
 The generated code looks exactly how I wished:
-
+    
+    {% highlight css linenos %}
     .btn {
         display: block;
         border: 2px solid black;
@@ -130,6 +139,7 @@ The generated code looks exactly how I wished:
         font-family: Tahoma;
         font-size: 14pt;
     }
+    {% endhighlight %}
 
 ### Live Examples
 
