@@ -5,22 +5,22 @@
 
 I work in a service company whose core business is mobile web applications development. 
 
-> We sell development time to customers who **know what but not how to** do business with mobile devices.
+> We sell development time to customers who **know what, but not how to** do business with mobile devices.
 
-We are 130 programmers divided in teams of 6 to 10 guys. Each group is highly committed to it's project and we suffer high time pressure to fulfill our customer expectations.
+We are 130 programmers divided into teams of 6 to 10 guys. Each group is highly committed to it's project and suffer under high time pressure to fulfill our different customers expectations.
 
-Projects around the company are not that different, we do tailored based customisations of a shared service, much like a classic web agency company producing custom websites.
+The projects around the company are not that different, we do tailored based customisations of a shared service, much like a classic web agency producing custom websites.
 
-> Today there is **close to zero code sharing** around our teams and this fact costs
-> a lot of money to the company.
+> Today there is **close to zero code sharing** around our teams and this fact costs us
+> a lot of money.
 
-We are a service company and **our trading value is delopers time**.  
-When two teams solve the same problem in two different ways they spend the double of the time. 
+We are a service company and **our trading value is our delopers time**.  
+When two teams solve the same problem in two different ways, they spend the double of the time. 
 
-> And when you sell services the rule of thumb is fairly easy:  
+> And when you sell services, the rule of thumb is fairly easy:  
 > **"the double the time the half the revenue"**
 
-To share code across teams appear to be the obvious and easy solution to our problem, but **it turned out that its not so easy** to really implement this in a proper way.
+To share code across teams appear to be the obvious and easy solution to our problem, but **it turned out that its not easy** to really implement this in a proper way.
 
 ## Our Struggle
 
@@ -36,7 +36,7 @@ This solution **was hard to hear and accept by management** because it involved 
 
 > _Feature Teams_ was just a dead end.
 
-Our second approach was drived by the hard boundary to **not change the company structure**.  
+Our second approach was driven by the hard boundary to **not change the company structure**.  
 <small>(We learned this lesson the hard way)</small>
 
 Long story short, we proposed to let our teams do their job and to create a side team of experts whose duty is to **take existing custom code and _change it to make it reusable_**.
