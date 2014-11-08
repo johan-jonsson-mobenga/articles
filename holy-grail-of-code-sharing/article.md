@@ -1,7 +1,18 @@
-# The Holy Grail of Code Sharing
+The Holy Grail of Code Sharing
 ---
 
 ![fig01 - The Holy Grail of Code Sharing](./img/holy-grail-of-code-sharing.jpg)
+
+Code sharing is a concept which is whispered in low tone around the office, is being shouted loud by tools producers and is simply misunderstood by the great part of us, IT folks.
+
+Management people wish every single line of code to be shared and 100% reusable, they see only one single fact: _less code means less costs_.
+
+Product Owners and Scrum Masters have big troubles in understanding why to put time in code sharing practices, their way of thinking is: _better done than perfect_.
+
+Developers... where do I start?  
+Oh yes, all we want is just to code and create amazing apps!
+
+This is the story about how **my team faced the challenge to improve code sharing** among the company with the great objective to improve code quality, reduce time to market and create happier developers.
 
 ## Our Problem
 
@@ -28,7 +39,7 @@ To share code across teams appear to be the obvious and easy solution to our pro
 
 Our product is a quite complex mobile web application so we proposed **to split the requirements into smaller chunks** that could be reusable and customisable by many teams.
 
-> We called those chunks _Features_ and for the pourpose of this article you can think to features as _Login_, _Payment_, _Articles_, ...
+> We called those chunks _Features_ and for the purpose of this article you can think to features as _Login_, _Payment_, _Articles_, ...
 
 A _Feature_ is a quite big part of the entire application that **implements a single responsibility** like loggin-in users or enabling payments, etc. It's smaller compared to the whole application but still it is a unfairly large piece of cake.
 
@@ -46,21 +57,21 @@ Long story short, we proposed to let our teams do their job and to create a side
 Also this time we became the target for jokes and laughter due to the concept of making things "_more reusable_". What does it mean? I still don't know.
 
 > The third time you try, you are more likely to succeed.  
-> <small>If you are humble enough to learn from your mistakes</small>
+> <small>If you are humble enough to learn from your mistakes.</small>
 
 ## Our Solution
 
-Our final and most succesfull approach was to discard _high accademic thinkings_ and to go straight down to the core of our daily job.
+Our final and most successful approach was to discard _high academic thinkings_ and to go straight down to the core of our daily job.
 
 > we do not just write code,  
 > **we do solve problems with code!** 
 
-So, insted of limit ourself to the struggle of code-sharing, we moved on and began to **analyze where we were wasing time** within the company.
+So, instead of limit ourself to the struggle of code-sharing, we moved on and began to **analyse where we were wasting time** within the company.
 
 > The most time expensive moment in every developer's day is called **_WTF_**.  
 > <small>_(What The Fuck)_</small>  
 > 
-> <small>This is not a bad or unpolite expression. This is the technical name for the worst nightmare every man or woman, involved in the process of solving problems with code, has.</small>
+> <small>This is not a bad or impolite expression. This is the technical name for the worst nightmare every man or woman, involved in the process of solving problems with code, has.</small>
 
 Our **first action point** was to put small and cross-team groups of developers into a room on a weekly basis with the only objective **to share _WTF_ stories**. 
 
@@ -85,10 +96,10 @@ This bullet list might just sound like a bunch of cliché expressions, but I hav
 > **Don't do bullshit!**
 
 * to build a big module is way more expensive than to build small ones that can work together
-* to write my own DOM library is way more timeconsuming compared to use a jQuery custom build
+* to write my own DOM library is way more time consuming compared to use a jQuery custom build
 * to write my own knowledge base about Javascript is just not the way, I can search, read and link valuable articles that are already available online
 
-All **those examples are surprisingly difficult to achive** when it comes to developers, 
+All **those examples are surprisingly difficult to achieve** when it comes to developers, 
 the most proud and stubborn people of the planet!  
 <small>(and as matter of fact I am proud to be one of them!)</small>
 
@@ -96,7 +107,7 @@ the most proud and stubborn people of the planet!
 
 When it comes to practical coding we have a simple action point which is **micro coding**.
 
-We left the idea of coding complete and reusable _Features_ way behind us. Today we focus in **writing the least amount of code possible** for the smallest possible of the responsibilies. And we share that.
+We left the idea of coding complete and reusable _Features_ way behind us. Today we focus in **writing the least amount of code possible** for the smallest possible of the responsibilities. And we share that.
 
 > Each function, source file or module must solve one single problem, no more than one.
 
@@ -120,19 +131,19 @@ For writing CSS we embrace the [Object Oriented CSS](oocss) and we use [LessCss]
 
 The third and most important action point was to **challenge our developers**.
 
-> There is nothing better than prizes to light up your willing of doing!
+> There is nothing better than prizes to **light up your willing of doing**!
 
 So we introduced **cross team challenges**: groups of 3-4 people from different teams who were competing to produce some fun apps or little games. 
 
 The prize was always quite impressive and at the very beginning some managers had an heart attack about that.
 
 > We have a play-room so we created a _ChallengeME_ app to invite a colleague to the 
-> table tennis, we do afterworks so we suggested a _PubRating_ app internal 
+> table tennis, we do afterwork so we suggested a _PubRating_ app internal 
 > to the company... and much more!
 
 Eventually the learning effort that every developer put into **the challenge was affecting the quality of his daily job** so much that no money could have ever bought this accomplishment!
 
-The best of it is that **we exploited the proudness and stubborness** which is natural in each developer to play a foundamental and positive role within the company: 
+The best of it is that **we exploited the proudness and stubbornness** which is natural in each developer to play a fundamental and positive role within the company: 
 
 > When a developer learn a better implementation he can not accept to see legacy code 
 > anymore so **he/she coach other colleagues to improve**. For free!
