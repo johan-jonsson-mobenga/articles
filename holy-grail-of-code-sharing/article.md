@@ -1,13 +1,15 @@
 # The Holy Grail of Code Sharing
 ---
 
+![fig01 - The Holy Grail of Code Sharing](./img/holy-grail-of-code-sharing.jpg)
+
 ## Our Problem
 
 I work in a service company whose core business is mobile web applications development. 
 
 > We sell development time to customers who **know what, but not how to** do business with mobile devices.
 
-We are 130 programmers divided into teams of 6 to 10 guys. Each group is highly committed to it's project and suffer under high time pressure to fulfill our different customers expectations.
+We are more than 100 programmers divided into teams of 6 to 10 guys. Each group is highly committed to it's project and suffer under high time pressure to fulfill our different customers expectations.
 
 The projects around the company are not that different, we do tailored based customisations of a shared service, much like a classic web agency producing custom websites.
 
@@ -28,7 +30,7 @@ Our product is a quite complex mobile web application so we proposed **to split 
 
 > We called those chunks _Features_ and for the pourpose of this article you can think to features as _Login_, _Payment_, _Articles_, ...
 
-A _Feature_ is a quite big part of the entire application that **implements a single responsibility** like loggin-in users or enabeling payments, etc. It's smaller compared to the whole app but still a fairly large thing.
+A _Feature_ is a quite big part of the entire application that **implements a single responsibility** like loggin-in users or enabling payments, etc. It's smaller compared to the whole application but still it is a unfairly large piece of cake.
 
 After some hard thinking we came up with a good understanding of the _Features_ that were involved in our apps and we were extremely happy and proud when **we proposed the company to reorganize our developers into _Feature Teams_** whose task is to implement a specific _Feature_ to be reausable by others.
 
